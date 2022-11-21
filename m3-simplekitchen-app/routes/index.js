@@ -16,10 +16,16 @@ router.get('/', (req, res) => {
 });
 //add another get below
 router.get('/register', (req, res) => {
- res.render("register", { title: "Registration form" }); 
+ res.render('register', { title: 'Registration form'}); 
 })
 
-router.get('/registrations', basic.check((req, res) => {
+//another for thankyou
+router.get('/thankyou', (req, res) => {
+  res.render('thankyou', { title: 'Thank you!'});
+});
+
+// change registrations to registrant
+router.get('/registrant', basic.check((req, res) => {
   Registration.find()
     .then((registrations) => {
       res.render('registrant', { title: 'Listing registrations', registrations });
