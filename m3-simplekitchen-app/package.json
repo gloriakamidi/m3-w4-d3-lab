@@ -7,7 +7,8 @@
     "watch": "nodemon ./start.js",
     "lite": "lite-server",
     "scss": "node-sass -watch scss/ -o css/",
-    "start": "npm run watch:all",
+    //"start": "npm run watch:all",
+    "start": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:scss": "onchange 'css/*.scss' -- npm run scss",
     "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite' "
@@ -15,22 +16,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.6.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-validator": "^6.10.0",
-    "http-auth": "^4.1.2",
-    "mongoose": "^5.12.0",
-    "pug": "^3.0.2",
-    "bootstrap": "^4.6.2",
     "global": "^4.4.0",
+    "http-auth": "^4.1.2",
     "jquery": "^3.4.1",
-    "popper.js": "^1.12.9"
+    "mongoose": "^5.12.0",
+    "popper.js": "^1.12.9",
+    "pug": "^3.0.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7",
     "lite-server": "^2.3.0",
     "node-sass": "^7.0.1",
+    "nodemon": "^2.0.7",
     "onchange": "^7.1.0",
     "parallelshell": "^3.0.1"
   }
